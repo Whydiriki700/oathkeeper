@@ -1,0 +1,12 @@
+name: oathkeeper
+version: 0.1.0
+description: "An owner's oath, enforced by the machine. The owner writes standing rules once in a plain oath file (standing missions, never delete or modify these surfaces, always require evidence such as a backup before touching those) and Oathkeeper enforces them deterministically on every tool call: never rules block with the violated oath line cited, always-require rules block until the prerequisite evidence exists in the same session, fingerprint snapshots of sworn surfaces detect changes made outside the gate, and the oath file itself can never be modified by the agent. Everything is local, append-only ledger included; no network, no model calls."
+author: "Riki Wahyudi"
+requires_hermes: ">=0.22.0"
+provides_tools:
+  - oath_check
+  - oath_status
+provides_hooks:
+  - pre_tool_call
+  - post_tool_call
+  - pre_llm_call
