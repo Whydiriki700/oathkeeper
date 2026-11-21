@@ -1,3 +1,5 @@
+![oathkeeper](assets/preview.png)
+
 # Oathkeeper
 
 **An owner's oath, enforced by the machine.**
